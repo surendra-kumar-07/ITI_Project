@@ -1,4 +1,4 @@
-import Desboard from "./components/Desboard"
+import Desboard from './components/admin/Desboard'
 
 function App() {
 

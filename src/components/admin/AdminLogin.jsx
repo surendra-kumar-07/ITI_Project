@@ -1,8 +1,10 @@
 import React from 'react'
+import AdminHeader from './AdminHeader'
 
 const AdminLogin = () => {
   return (
     <>
+    <AdminHeader/>
      <div className='w-full h-screen bg-black/10'>
         <div className='flex justify-center items-center h-full'>
         <div className='w-full m-3 md:w-1/4 p-3 -mt-48'>
