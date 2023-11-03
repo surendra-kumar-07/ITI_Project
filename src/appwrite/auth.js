@@ -32,11 +32,13 @@ export class AuthService {
     }
 
     // logout method
-    async logout(){
+    async logout(sessionId){
         try {
-            await this.account.deleteSession();
+            await this.account.deleteSession(sessionId);
+            return true
         } catch (error) {
             console.log('appwrite-logout',error);
+            return false
         }
     }
 }

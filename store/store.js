@@ -3,7 +3,7 @@ import AuthSlice from "../src/feachers/authSlice";
 
 const store = configureStore({
     reducer: {
-        AuthSlice
+        auth: AuthSlice
     }
 });
 

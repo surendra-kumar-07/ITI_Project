@@ -1,7 +1,8 @@
 import React from 'react'
 import {GrSearch} from 'react-icons/gr'
+import blog_img from "../../assets/blog_img.jpg"
 
-const AllPost = () => {
+const AllPost = ({admin}) => {
   return (
     <>
     <div className='w-full min-h-screen bg-black/10 pb-10 pt-2'>

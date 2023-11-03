@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const PostCard = ({$id, title, featuredImage}) => {
+const PostCard = ({$id, title, featuredImage,date}) => {
   return (
     <>
     <Link to={`/post/${$id}`}>
@@ -13,7 +13,7 @@ const PostCard = ({$id, title, featuredImage}) => {
           <h1 className="font-semibold underline mb-1  cursor-pointer">
             {title}
           </h1>
-          <span className="text-sm">6dhfdf fd20220</span>
+          <span className="text-sm">{date}</span>
         </div>
       </div>
       </Link>

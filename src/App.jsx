@@ -1,4 +1,5 @@
-import Desboard from './components/admin/Desboard'
+import {LoginForm} from "./components/index.js"
+
 
 function App() {
 
@@ -6,8 +7,8 @@ function App() {
   return (
     <>
     <div>
-    <Desboard />
-
+    {/* <AdminHeader /> */}
+   <LoginForm/>
     </div>
     </>
   )

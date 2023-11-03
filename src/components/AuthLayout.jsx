@@ -1,18 +1,19 @@
 import React, { useState, useEffect } from 'react'
 import { useSelector } from 'react-redux'
-import { useNavigate } from 'react-router-dom'
-import Loading from './index'
+import { Outlet, useNavigate } from 'react-router-dom'
+import {Loading} from './index'
 
 export default function Protected({children, authentication = true}) {
     const [loading, setLoading] = useState(true)
     const navigate = useNavigate()
-    const authStatus = useSelector((state)=> state.auth.status)
+    const authStatus = false
+    // useSelector((state)=> state.auth.status)
 
     useEffect(()=>{
         if(authentication && authStatus !== authentication){
-            navigate("/adminpanel")
+            navigate("/admin-panel-login")
         } else if(!authentication && authStatus !== authentication){
-            navigate("/adminpanel/dashboard")
+            navigate("/admin-dashboard")
         } 
         setLoading(false)
     }, [authStatus, navigate, authentication])
@@ -23,6 +24,7 @@ export default function Protected({children, authentication = true}) {
     return !loading ? (
           <>
           {children}
+           <Outlet />
            </>
     ) : (<Loading />)
 }
